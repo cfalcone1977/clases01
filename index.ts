@@ -41,16 +41,21 @@ class Televisor {
         }
     }
     public channelDown(): void {
+     if (this.isOn) {    
         if (this.channel === 1) {
             this.channel = 99
         } else {
             this.channel -= 1
         }
+       }
     }
     public selectChannel(channelNumber: number) {
+     if (this.isOn){
         if (channelNumber > 0 && channelNumber <= 99) {
             this.channel = channelNumber
         }
+    }
+
     }
 
     public volumeUp(): void {
@@ -100,3 +105,15 @@ TV1.info();
 TV1.switchPower();
 TV1.volumeUp();
 TV1.info();
+TV1.switchPower();
+console.log("estado actual");
+TV1.info();
+TV1.channelUp;
+TV1.channelUp;
+TV1.channelUp;
+TV1.switchPower();
+TV1.info();
+TV1.channelDown();
+TV1.channelDown();
+TV1.info();
+
