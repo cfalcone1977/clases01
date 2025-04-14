@@ -54,24 +54,27 @@ class Televisor {
     }
 
     public volumeUp(): void {
+     if (this.isOn){
         if (this.isMuted){
-                          this.isMuted=false;
-                         } else {
-                        if (this.volume < 100) {
-                              this.volume = this.volume + 1;
-                                               }
-                                }
+            this.isMuted=false;
+           } else {
+          if (this.volume < 100) {
+                this.volume = this.volume + 1;
+                                 }
+                  }
+     }   
     }
     public volumeDown(): void {
+     if (this.isOn) {
         if (this.isMuted){
             this.isMuted=false;
            } else {
           if (this.volume > 0) {
                 this.volume = this.volume - 1;
                                  }
-                  }     
-
-        }
+                  }  
+      }   
+     }
     }
 
 const TV1 = new Televisor("TLC");   
@@ -87,4 +90,13 @@ TV1.volumeDown();
 TV1.volumeDown();
 TV1.volumeUp();
 TV1.info();
-
+TV1.switchPower(); 
+TV1.info();
+TV1.volumeUp();
+TV1.volumeUp();
+TV1.volumeUp();
+TV1.volumeUp();
+TV1.info();
+TV1.switchPower();
+TV1.volumeUp();
+TV1.info();
